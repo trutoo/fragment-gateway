@@ -142,6 +142,6 @@ app.use('/health', (req, res, next) => {
 // Initial Listening
 //------------------------------------------------------------------------------------
 
-app.listen(config.port || 3000, () => {
-  logger.debug(`Starting service on port 3001 running version ${metadata.version}`);
+app.listen(config.port, () => {
+  logger.debug(`Starting service on port ${config.port} running version ${metadata.version}`);
 });
