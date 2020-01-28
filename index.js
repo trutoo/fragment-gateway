@@ -25,7 +25,7 @@ app.use(cors());
 //------------------------------------------------------------------------------------
 
 app.get(
-  '/fragment/:package*',
+  '/fragments/:package*',
   (req, res, next) => {
     let id = req.params.package;
     logger.debug(`Request with path [${req.path}] from [${req.ip}]`);
@@ -83,14 +83,14 @@ app.get(
       // If this isn't a direct request to package root send it to the next handler
       if (req.params[0].length) {
         // Rewrite to include version
-        req.url = `/fragment/${id}${req.params[0]}`;
+        req.url = `/fragments/${id}${req.params[0]}`;
         //req.url = req.url.replace('@latest', `@${version}`);
         return next();
       }
 
       // Retrieve the cached version and return it with headers and body
       const result = await store.fetch(scope, name, version);
-      res.setHeader('Link', link.header(`/fragment/${id}`, result));
+      res.setHeader('Link', link.header(`/fragments/${id}`, result));
       res.setHeader('X-Version', version);
       res.send(result.render);
       logger.debug(`Serving fragment with id [${id}] to [${req.ip}]`);
@@ -107,7 +107,7 @@ app.get(
 //------------------------------------------------------------------------------------
 
 app.use(
-  '/fragment',
+  '/fragments',
   (req, res, next) => {
     const path = req.path.replace(/^\/.*?\//, '');
     if (!filter.files(path)) {

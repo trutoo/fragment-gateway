@@ -1,6 +1,6 @@
 # Fragment Gateway
 
-Responsible for fetching and storing npm packages and is accessible at `/fragment/scope$name@version`. Requests to these packages are returned in a fragment format, where body will be a rendered HTML and a X-Link header which may contain multiple `fragment-script` and `stylesheet`.
+Responsible for fetching and storing npm packages and is accessible at `/fragments/scope$name@version`. Requests to these packages are returned in a fragment format, where body will be a rendered HTML and a X-Link header which may contain multiple `fragment-script` and `stylesheet`.
 
 ## Environmental Configurations
 
