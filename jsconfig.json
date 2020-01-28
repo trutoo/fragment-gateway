@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "commonjs",
+    "checkJs": true,
+    "resolveJsonModule": true
+  },
+  "include": ["index.js", "lib/**/*.js", "types/**/*.d.ts"],
+  "exclude": ["node_modules"]
+}

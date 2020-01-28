@@ -1,0 +1,63 @@
+{
+  "name": "@trutoo/fragment-gateway",
+  "version": "0.0.0",
+  "private": true,
+  "description": "API gateway for transforming packages into fragments and serving their static files",
+  "author": {
+    "name": "Trutoo AB",
+    "url": "https://www.trutoo.com/"
+  },
+  "contributors": [
+    {
+      "name": "Erik Hughes",
+      "email": "erik.hughes@trutoo.com",
+      "url": "https://trafikforvaltningen-dev.atlassian.net/jira/people/5c77ed8ddc72836722d3f374"
+    }
+  ],
+  "bugs": {
+    "url": "https://trafikforvaltningen-dev.atlassian.net/browse/"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "main": "index.js",
+  "husky": {
+    "hooks": {
+      "commit-msg": "node tools/commit-msg.js"
+    }
+  },
+  "scripts": {
+    "start": "nodemon -e js -w index.js -w lib index.js",
+    "docker": "docker run -p 3001:3001 --env-file .env trutoo/fragment-gateway",
+    "test": "jest",
+    "test:ci": "jest --runInBand --ci --reporters=default --reporters=jest-junit",
+    "release": "node -r dotenv/config ./node_modules/.bin/semantic-release"
+  },
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "minimatch": "^3.0.4",
+    "nodemon": "^2.0.2",
+    "request": "^2.88.0",
+    "semver": "^7.1.1",
+    "tar": "^5.0.5",
+    "winston": "^3.2.1",
+    "winston-azuretable": "^1.1.0",
+    "winston-daily-rotate-file": "^4.4.2"
+  },
+  "devDependencies": {
+    "@semantic-release/changelog": "^3.0.6",
+    "@semantic-release/exec": "^4.0.0",
+    "@semantic-release/git": "^8.0.0",
+    "husky": "^4.2.1",
+    "jest": "^25.1.0",
+    "jest-junit": "^10.0.0",
+    "semantic-release": "^16.0.4",
+    "semantic-release-docker": "^2.2.0",
+    "superagent": "^5.2.1",
+    "supertest": "^4.0.2"
+  },
+  "optionalDependencies": {
+    "@types/jest": "^24.9.1"
+  }
+}

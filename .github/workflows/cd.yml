@@ -1,0 +1,33 @@
+name: Continuous Delivery
+
+on:
+  push:
+    branches:
+      - master
+      - release/*
+
+jobs:
+  delivery:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2-beta
+
+      - name: Setup Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          registry-url: https://npm.pkg.github.com
+          scope: trutoo
+
+      - name: Install dependencies as CI
+        run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_DEPLOY_TOKEN }}
+
+      - name: Run semantic release
+        run: npm run release -- -ci
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}

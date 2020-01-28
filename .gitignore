@@ -1,0 +1,8 @@
+node_modules
+*.log
+tmp
+store/*
+.env
+
+# Special rule for testing packages
+!store/trutoo$fragment*

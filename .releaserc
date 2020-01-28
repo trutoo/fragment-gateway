@@ -1,0 +1,34 @@
+{
+  "dryRun": false,
+  "ci": false,
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "config": "./tools/changelog.js"
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "config": "./tools/changelog.js"
+      }
+    ],
+    "@semantic-release/changelog",
+    "@semantic-release/npm",
+    [
+      "@semantic-release/exec",
+      {
+        "verifyConditionsCmd": "npm run test",
+        "prepareCmd": "docker build -t trutoo/fragment-gateway ."
+      }
+    ],
+    [
+      "semantic-release-docker",
+      {
+        "name": "trutoo/fragment-gateway"
+      }
+    ],
+    "@semantic-release/git"
+  ]
+}

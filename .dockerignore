@@ -1,0 +1,5 @@
+*
+!lib/*.js
+lib/*.spec.js
+!index.js
+!package*.json

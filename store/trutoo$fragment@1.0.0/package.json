@@ -1,0 +1,10 @@
+{
+  "name": "@trutoo/fragment",
+  "version": "1.0.0",
+  "description": "",
+  "browser": "index.js",
+  "render": "index.html",
+  "styles": "index.css",
+  "author": "",
+  "license": "ISC"
+}
