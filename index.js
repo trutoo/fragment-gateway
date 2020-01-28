@@ -12,7 +12,6 @@ const logger = require('./lib/logger.js');
 const utils = require('./lib/utils.js');
 const filter = require('./lib/filter.js');
 const link = require('./lib/link.js');
-const bamboo = require('./lib/bamboo.js');
 const feed = require('./lib/feed.js');
 const store = require('./lib/store.js');
 
@@ -62,16 +61,7 @@ app.get(
   async (req, res, next) => {
     let id = req.params.package;
     try {
-      let { scope, name, version, branch } = utils.parsePath(id);
-
-      // For bamboo branching purposes and should be considered a work in progress
-      if (branch) {
-        const result = await bamboo.fetch(branch);
-        res.setHeader('Link', link.header(req.url, result));
-        res.setHeader('X-Version', branch);
-        res.send(result.render);
-        return;
-      }
+      let { scope, name, version } = utils.parsePath(id);
 
       // If no version is specified check for the latest stored version
       if (!version) {
@@ -80,7 +70,7 @@ app.get(
           .filter(directory => directory.startsWith(utils.formatPath(scope, name)));
         version = store.latest(packages);
         if (version) {
-          id = utils.formatPath(scope, name, version, branch);
+          id = utils.formatPath(scope, name, version);
         }
       }
 
@@ -88,7 +78,7 @@ app.get(
       if (!fs.existsSync(path.join(config.store, id)))
         ({ scope, name, version } = await feed.fetch(scope, name, version));
 
-      id = utils.formatPath(scope, name, version, branch);
+      id = utils.formatPath(scope, name, version);
 
       // If this isn't a direct request to package root send it to the next handler
       if (req.params[0].length) {

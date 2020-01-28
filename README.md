@@ -68,23 +68,3 @@ Azure storage account access key for logging to azure tables.
 
 **Default**: `fragmentgateway`  
 Azure storage account logging table name.
-
-### BAMBOO (wip)
-
-**Default**: `undefined`  
-Url specifying bamboo server for REST api requests.
-
-### BAMBOO_BRANCHES (wip)
-
-**Default**: `undefined`  
-Url specifying bamboo server hosting branch containers.
-
-### BAMBOO_USER (wip)
-
-**Default**: `undefined`  
-Username required for bamboo server REST api access.
-
-### BAMBOO_PASS (wip)
-
-**Default**: `undefined`  
-Password required for bamboo server REST api access.
