@@ -1,3 +1,25 @@
+# [1.1.0](https://github.com/trutoo/fragment-gateway/compare/v1.0.0...v1.1.0) (2020-01-28)
+
+
+### Bug Fixes
+
+* hardcoded port ([0b5285a](https://github.com/trutoo/fragment-gateway/commit/0b5285a6bdb914bf2c1edcbcc9f606d712aba909))
+
+
+### Build System
+
+* updated dependencies to latest version ([c4fa634](https://github.com/trutoo/fragment-gateway/commit/c4fa6349dbd8fe7280f621ef9ce52e85c31ad13c))
+
+
+### Code Refactoring
+
+* /fragment -> /fragments ([810afee](https://github.com/trutoo/fragment-gateway/commit/810afee7e8658bf7c0c1a32d4a0ac68f6613b773))
+
+
+### Features
+
+* added root route response ([6bde616](https://github.com/trutoo/fragment-gateway/commit/6bde616a4c2bce73762f2ca53c0741bbaaa6b148))
+
 # 1.0.0 (2020-01-28)
 
 
