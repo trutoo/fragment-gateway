@@ -13,7 +13,7 @@
     "url": "https://www.trutoo.com/"
   },
   "license": "GPL-3.0",
-  "repository": "git://github.com/trutoo/fragment-gateway.git",
+  "repository": "https://github.com/trutoo/fragment-gateway.git",
   "bugs": "https://github.com/trutoo/fragment-gateway/issues",
   "contributors": [
     {
