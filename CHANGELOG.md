@@ -1,3 +1,21 @@
+## [1.1.1](https://github.com/trutoo/fragment-gateway/compare/v1.1.0...v1.1.1) (2020-01-29)
+
+
+### Bug Fixes
+
+* cleanup metadata ([e2c809d](https://github.com/trutoo/fragment-gateway/commit/e2c809d4dbb70c3a2b12deb8ebeb28866608cefd))
+
+
+### Build System
+
+* installed semantic release npm ([fe61d2a](https://github.com/trutoo/fragment-gateway/commit/fe61d2a5ff05dd88c18f836705f70fe02ca82bca))
+
+
+### Continuous Integration
+
+* updated docker token ([b3b2d0b](https://github.com/trutoo/fragment-gateway/commit/b3b2d0bd95b47d3f42c9e01655fed06706aeee75))
+* updated repository url ([4d993b9](https://github.com/trutoo/fragment-gateway/commit/4d993b987fa6ab687244b20aeff1a98a5ea446fe))
+
 # [1.1.0](https://github.com/trutoo/fragment-gateway/compare/v1.0.0...v1.1.0) (2020-01-28)
 
 
