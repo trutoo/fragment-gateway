@@ -65,11 +65,13 @@ app.get(
       let { scope, name, version, branch } = utils.parsePath(id);
 
       // For bamboo branching purposes and should be considered a work in progress
+      // Missing static serve of files
       if (branch) {
         const result = await bamboo.fetch(branch);
-        res.setHeader('Link', link.header(req.url, result));
+        res.setHeader('Link', link.header(`/fragment/${id}`, result));
         res.setHeader('X-Version', branch);
         res.send(result.render);
+        logger.debug(`Serving fragment with id [${id}] to [${req.ip}] from branch [${branch}]`);
         return;
       }
 
