@@ -1,3 +1,11 @@
+## [1.2.1](https://github.com/trutoo/fragment-gateway/compare/v1.2.0...v1.2.1) (2020-02-06)
+
+
+### Bug Fixes
+
+* auth not allowed to be empty ([000cd2b](https://github.com/trutoo/fragment-gateway/commit/000cd2ba94d3a4b1a0f3a30a9fc0426ef969b84e))
+* logging improvement and location change ([e502731](https://github.com/trutoo/fragment-gateway/commit/e502731e06c526c3b4723b93e1f08c4e7b997280))
+
 # [1.2.0](https://github.com/trutoo/fragment-gateway/compare/v1.1.1...v1.2.0) (2020-02-06)
 
 
