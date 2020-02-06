@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/trutoo/fragment-gateway/compare/v1.1.1...v1.2.0) (2020-02-06)
+
+
+### Features
+
+* added registry token for private package feeds ([ef10309](https://github.com/trutoo/fragment-gateway/commit/ef103092b9b998efa4c27e94589a803bcd6fb801))
+* implemented token and rewrote tarball fetching ([cbfa1a7](https://github.com/trutoo/fragment-gateway/commit/cbfa1a7e02f4859bc87a13c887710ed206e00465))
+
 ## [1.1.1](https://github.com/trutoo/fragment-gateway/compare/v1.1.0...v1.1.1) (2020-01-29)
 
 
