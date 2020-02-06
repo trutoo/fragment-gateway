@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/trutoo/fragment-gateway/compare/v1.2.2...v1.2.3) (2020-02-06)
+
+
+### Bug Fixes
+
+* make sure tmp directory is created if missing ([c65b609](https://github.com/trutoo/fragment-gateway/commit/c65b6092a7937cff49b2bf21f4b06a4e76b35f5a))
+
 ## [1.2.2](https://github.com/trutoo/fragment-gateway/compare/v1.2.1...v1.2.2) (2020-02-06)
 
 
