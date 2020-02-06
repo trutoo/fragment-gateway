@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/trutoo/fragment-gateway/compare/v1.2.1...v1.2.2) (2020-02-06)
+
+
+### Bug Fixes
+
+* added more debug logs ([047e229](https://github.com/trutoo/fragment-gateway/commit/047e22941a30e994a0d915e0429e73b5067d02fe))
+
 ## [1.2.1](https://github.com/trutoo/fragment-gateway/compare/v1.2.0...v1.2.1) (2020-02-06)
 
 
