@@ -20,6 +20,9 @@ app.enable('trust proxy');
 app.use(compression());
 app.use(cors());
 
+// If temporary directory hasn't yet been created
+if (!fs.existsSync(config.tmp)) fs.mkdirSync(config.tmp);
+
 //------------------------------------------------------------------------------------
 // Package Fetching Requests
 //------------------------------------------------------------------------------------
