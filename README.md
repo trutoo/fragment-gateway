@@ -14,10 +14,15 @@ Port which the server listens on.
 **Default**: `https://registry.npmjs.org`  
 Url specifying an alternative or private registry to fetch packages from.
 
-### WORKING_DIR
+### REGISTRY_TOKEN
+
+**Default**: `undefined`  
+Access token used if registry is private or needs additional permissions.
+
+### TEMP_STORE
 
 **Default**: `CWD/tmp`  
-Path to change the working directory where `package.tar.gz` will be downloaded to. This will not affect [PACKAGE_STORE](#PACKAGE_STORE) location.
+Path to change the temporary directory where `package.tar.gz` will be downloaded to. This will not affect [PACKAGE_STORE](#PACKAGE_STORE) location.
 
 ### PACKAGE_STORE
 
