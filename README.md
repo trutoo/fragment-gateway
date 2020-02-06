@@ -19,16 +19,6 @@ Url specifying an alternative or private registry to fetch packages from.
 **Default**: `undefined`  
 Access token used if registry is private or needs additional permissions.
 
-### TEMP_STORE
-
-**Default**: `CWD/tmp`  
-Path to change the temporary directory where `package.tar.gz` will be downloaded to. This will not affect [PACKAGE_STORE](#PACKAGE_STORE) location.
-
-### PACKAGE_STORE
-
-**Default**: `CWD/store`  
-Path to change the package directory where `package.tar.gz` will be extracted to and static files will be served from.
-
 ### ALLOW_LATEST
 
 **DEFAULT**: `false`  
