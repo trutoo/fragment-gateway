@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/trutoo/fragment-gateway/compare/v1.2.3...v1.3.0) (2020-02-21)
+
+
+### Features
+
+* added semver version range ([5646bed](https://github.com/trutoo/fragment-gateway/commit/5646bed8aaef6aaa27931520217470e370ee9aa7))
+
 ## [1.2.3](https://github.com/trutoo/fragment-gateway/compare/v1.2.2...v1.2.3) (2020-02-06)
 
 
