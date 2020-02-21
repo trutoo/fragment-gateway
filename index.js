@@ -35,7 +35,7 @@ app.get(
 
     try {
       let { version } = utils.parsePath(id);
-      if (!config.allow_latest && version == 'latest') {
+      if ((!config.allow_latest && version == 'latest') || version == '*') {
         logger.debug(
           `Cancelled request for id [${id}] from [${req.ip}], blocked by env 'ALLOW_LATEST: ${config.allow_latest}'`,
         );
