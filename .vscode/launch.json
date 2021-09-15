@@ -7,9 +7,8 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
-      "program": "${workspaceFolder}/index.js",
-      "outFiles": ["${workspaceFolder}/**/*.js"]
+      "name": "Launch Gateway",
+      "program": "${workspaceFolder}/index.js"
     }
   ]
 }
