@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/trutoo/fragment-gateway/compare/v1.3.0...v1.3.1) (2021-09-15)
+
+
+### Bug Fixes
+
+* launch config ([abfbde6](https://github.com/trutoo/fragment-gateway/commit/abfbde6ff82238ffce2bd16de8a87f4217c1e173))
+
 # [1.3.0](https://github.com/trutoo/fragment-gateway/compare/v1.2.3...v1.3.0) (2020-02-21)
 
 
